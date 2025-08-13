@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Somine - Boutique officielle</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f7f7f7;
+    margin: 0; padding: 0;
+  }
+  header {
+    background: #003366;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+  h1 {
+    margin: 0;
+  }
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  .product {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    width: 280px;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .product img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    user-select: none;
+  }
+  .product h3 {
+    margin: 1rem 0 0.5rem;
+  }
+  .price {
+    color: #009900;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .btn {
+    display: inline-block;
+    background: #003366;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background: #0055aa;
+  }
+
+  /* Animation fusée */
+  .rocket {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    cursor: pointer;
+    transition: transform 1.5s ease-in;
+  }
+  .rocket.launch {
+    transform: translateY(-110vh) rotate(720deg);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Somine - Boutique officielle</h1>
+  <p>Découvrez nos produits de qualité</p>
+</header>
+
+<section class="products">
+  <div class="product">
+    <img src="https://cdn.pixabay.com/photo/2014/04/03/10/32/crayons-311663_960_720.png" alt="Crayons Somine" draggable="false" />
+    <h3>Crayons Somine</h3>
+    <p>Des crayons de haute qualité avec le logo Somine.</p>
+    <div class="price">4,90 €</div>
+    <a href="#" class="btn">Acheter</a>
+  </div>
+  <div class="product">
+    <img src="https://cdn.pixabay.com/photo/2016/11/29/06/15/t-shirt-1867164_960_720.png" alt="T-shirt Somine" draggable="false" />
+    <h3>T-shirt Somine</h3>
+    <p>T-shirt confortable avec inscription Somine stylée.</p>
+    <div class="price">19,90 €</div>
+    <a href="#" class="btn">Acheter</a>
+  </div>
+</section>
+
+<img id="rocket" class="rocket" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Cartoon_rocket.svg/512px-Cartoon_rocket.svg.png" alt="Fusée Somine" title="Clique pour décoller !" draggable="false" />
+
+<script>
+  const rocket = document.getElementById('rocket');
+  rocket.addEventListener('click', () => {
+    rocket.classList.add('launch');
+    // Revenir à la position initiale après l'animation (1.5s)
+    setTimeout(() => {
+      rocket.classList.remove('launch');
+    }, 1600);
+  });
+</script>
+
+</body>
+</html>
