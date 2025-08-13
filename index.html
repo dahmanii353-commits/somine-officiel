@@ -1,108 +1,116 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Somine - Boutique officielle</title>
-<img src="logo.jpg" alt="Logo Somine" style="height:40px; vertical-align: middle; margin-right: 10px;">
-<h1 style="display: inline-block; vertical-align: middle; margin: 0;">Somine - Boutique officielle</h1>
-  <p>Découvrez nos produits de qualité</p>
-</header>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Somine - Boutique officielle</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      color: #003300;
+    }
 
-<style>
-  body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: url('background.jpg') no-repeat center center fixed;
-  background-size: cover;
-  margin: 0; padding: 0;
-}
-  header {
-    background: #003366;
-    color: white;
-    padding: 1rem 2rem;
-    text-align: center;
-  }
-  h1 {
-    margin: 0;
-  }
-  .products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
-  }
-  .product {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
-    width: 280px;
-    padding: 1rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .product img {
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
-    user-select: none;
-  }
-  .product h3 {
-    margin: 1rem 0 0.5rem;
-  }
-  .price {
-    color: #009900;
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
-  .btn {
-    display: inline-block;
-    background: #003366;
-    color: white;
-    padding: 0.5rem 1.2rem;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s;
-    cursor: pointer;
-  }
-  .btn:hover {
-    background: #0055aa;
-  }
+    header {
+      background: #006400; /* vert foncé */
+      color: white;
+      text-align: center;
+      padding: 1rem 2rem;
+    }
 
-  /* Animation fusée */
-  .rocket {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 80px;
-    cursor: pointer;
-    transition: transform 1.5s ease-in;
-  }
-  .rocket.launch {
-    transform: translateY(-110vh) rotate(720deg);
-  }
-</style>
+    header img {
+      height: 60px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      color: gold;
+      margin: 0.5rem 0 0.2rem;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .product {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      width: 280px;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+    }
+
+    .product h3 {
+      margin: 1rem 0 0.5rem;
+    }
+
+    .price {
+      color: gold;
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      background: gold;
+      color: #003300;
+      padding: 0.5rem 1.2rem;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #ffd700;
+    }
+
+    .rocket {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 80px;
+      cursor: pointer;
+      transition: transform 1.5s ease-in;
+    }
+
+    .rocket.launch {
+      transform: translateY(-110vh) rotate(720deg);
+    }
+  </style>
 </head>
 <body>
 
 <header>
+  <img src="logo.jpg" alt="Logo Somine" />
   <h1>Somine - Boutique officielle</h1>
   <p>Découvrez nos produits de qualité</p>
 </header>
 
 <section class="products">
   <div class="product">
-    <img src="pencil.jpg" alt="Crayons Somine" draggable="false" />
+    <img src="pencil.jpg" alt="Crayons Somine" />
     <h3>Crayons Somine</h3>
     <p>Des crayons de haute qualité avec le logo Somine.</p>
     <div class="price">4,90 €</div>
     <a href="#" class="btn">Acheter</a>
   </div>
   <div class="product">
-    <img src="tshirt.jpg" alt="T-shirt Somine" draggable="false" />
+    <img src="tshirt.jpg" alt="T-shirt Somine" />
     <h3>T-shirt Somine</h3>
     <p>T-shirt confortable avec inscription Somine stylée.</p>
     <div class="price">19,90 €</div>
@@ -110,13 +118,12 @@
   </div>
 </section>
 
-<img id="rocket" class="rocket" src="rocket.gif" alt="Fusée Somine" title="Clique pour décoller !" draggable="false" />
+<img id="rocket" class="rocket" src="rocket.gif" alt="Fusée Somine" title="Clique pour décoller !" />
 
 <script>
   const rocket = document.getElementById('rocket');
   rocket.addEventListener('click', () => {
     rocket.classList.add('launch');
-    // Revenir à la position initiale après l'animation (1.5s)
     setTimeout(() => {
       rocket.classList.remove('launch');
     }, 1600);
@@ -125,9 +132,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
